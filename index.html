@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot Pros | Automate Your Sales Process</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: scale(1.03);
+        }
+        .pricing-card.popular {
+            border: 2px solid #a777e3;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #a777e3;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .policy-page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .policy-page h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: #4a5568;
+        }
+        .policy-page h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+        .policy-page p {
+            margin-bottom: 1rem;
+            color: #4a5568;
+        }
+        .policy-page ul {
+            list-style-type: disc;
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        /* New booking system styles */
+        .booking-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .booking-tabs {
+            display: flex;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 20px;
+        }
+        .booking-tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #718096;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+        .booking-tab.active {
+            color: #6e8efb;
+            border-bottom: 3px solid #6e8efb;
+        }
+        .booking-content {
+            display: none;
+        }
+        .booking-content.active {
+            display: block;
+        }
+        .time-slot {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            background-color: #edf2f7;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .time-slot:hover {
+            background-color: #e2e8f0;
+        }
+        .time-slot.selected {
+            background-color: #6e8efb;
+            color: white;
+        }
+        .calendar-day {
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        .calendar-day:hover {
+            background-color: #edf2f7;
+        }
+        .calendar-day.selected {
+            background-color: #6e8efb;
+            color: white;
+        }
+        .calendar-day.disabled {
+            color: #cbd5e0;
+            cursor: not-allowed;
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+        }
+        .calendar-weekdays {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-robot text-2xl text-purple-600 mr-2"></i>
+                        <span class="text-xl font-bold text-gray-900">AI Chatbot Pros</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="nav-link text-gray-700 hover:text-purple-600">Features</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-purple-600">About</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-purple-600">Results</a>
+                    <a href="#pricing" class="nav-link text-gray-700 hover:text-purple-600">Pricing</a>
+                    <a href="#contact" class="px-4 py-2 rounded-md text-white gradient-bg hover:opacity-90 transition duration-300">Book Demo</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-purple-600 hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50">Features</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50">About</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50">Results</a>
+                <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50">Pricing</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-white gradient-bg hover:opacity-90">Book Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white pt-32 pb-20 md:pt-40 md:pb-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">Automate Your Sales Process with AI Chatbots</h1>
+                    <p class="text-xl md:text-2xl opacity-90 mb-8">Book sales calls 24/7 with our AI-powered chatbots — ready in just 48 hours!</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contact" class="px-8 py-4 bg-white text-purple-600 font-bold rounded-lg text-lg hover:bg-gray-100 transition duration-300 text-center">Get Started Today</a>
+                        <a href="#features" class="px-8 py-4 border-2 border-white text-white font-bold rounded-lg text-lg hover:bg-white hover:bg-opacity-10 transition duration-300 text-center">How It Works</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                        <div class="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+                        <div class="relative bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-6 shadow-xl">
+                            <div class="flex items-center mb-4">
+                                <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="bg-white bg-opacity-20 rounded-lg p-4 mb-4">
+                                <p class="text-white">Hi there! I'm your AI sales assistant. How can I help you book a call today?</p>
+                            </div>
+                            <div class="bg-white rounded-lg p-4">
+                                <p class="text-gray-800">I'd like to schedule a demo of your product.</p>
+                            </div>
+                            <div class="mt-4 flex space-x-2">
+                                <button class="px-3 py-2 bg-white bg-opacity-20 text-white rounded-lg text-sm">Sure! What day works?</button>
+                                <button class="px-3 py-2 bg-white bg-opacity-20 text-white rounded-lg text-sm">Tell me more first</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="bg-gray-100 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-gray-500 mb-6">Trusted by innovative businesses worldwide</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="text-2xl font-bold text-gray-700">TechStart</div>
+                <div class="text-2xl font-bold text-gray-700">GrowthHack</div>
+                <div class="text-2xl font-bold text-gray-700">DigitalAgency</div>
+                <div class="text-2xl font-bold text-gray-700">SaaSPro</div>
+                <div class="text-2xl font-bold text-gray-700">CloudNine</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Your 24/7 Sales Team</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our AI-powered chatbots work around the clock to qualify leads, answer questions, and book sales calls — so you can focus on closing deals.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-16 h-16 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-clock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Always Available</h3>
+                    <p class="text-gray-600">Your chatbot never sleeps, ensuring you never miss a lead, even outside business hours.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-16 h-16 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Lightning Fast</h3>
+                    <p class="text-gray-600">Get your custom chatbot implemented in just 48 hours, not weeks or months.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="w-16 h-16 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Proven Results</h3>
+                    <p class="text-gray-600">Our clients typically see a 3-5x increase in qualified sales calls within the first month.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Powerful Features</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to automate your sales process and book more calls.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card transition duration-300">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-calendar-check text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Automated Call Booking</h3>
+                    <p class="text-gray-600">Seamlessly integrate with your calendar to let leads book calls directly with you.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card transition duration-300">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-question-circle text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Smart Lead Qualification</h3>
+                    <p class="text-gray-600">Our AI asks the right questions to ensure only high-quality leads book calls.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card transition duration-300">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Custom Branding</h3>
+                    <p class="text-gray-600">Match your chatbot's look and feel to your brand for a seamless experience.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card transition duration-300">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-language text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Multilingual Support</h3>
+                    <p class="text-gray-600">Engage with leads in their preferred language for higher conversion rates.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card transition duration-300">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-pie text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Analytics Dashboard</h3>
+                    <p class="text-gray-600">Track performance, conversion rates, and ROI with our intuitive dashboard.</p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm feature-card transition duration-300">
+                    <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-plug text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Easy Integration</h3>
+                    <p class="text-gray-600">Works with your existing website, CRM, and calendar tools in minutes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Real Results From Our Clients</h2>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">Don't just take our word for it. See what our customers say about their experience.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="testimonial-card p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-purple-300 flex items-center justify-center mr-4">
+                            <span class="text-xl font-bold text-purple-800">JD</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">John D.</h4>
+                            <p class="text-sm opacity-80">Marketing Director</p>
+                        </div>
+                    </div>
+                    <p class="mb-6 italic">"This has transformed our business! In just 3 days, we booked 12 calls that we would have otherwise missed. The chatbot pays for itself."</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-blue-300 flex items-center justify-center mr-4">
+                            <span class="text-xl font-bold text-blue-800">SM</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah M.</h4>
+                            <p class="text-sm opacity-80">CEO, SaaS Company</p>
+                        </div>
+                    </div>
+                    <p class="mb-6 italic">"Our sales team was overwhelmed with unqualified leads. Now the chatbot qualifies them first, and we're closing 40% more deals with less effort."</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-green-300 flex items-center justify-center mr-4">
+                            <span class="text-xl font-bold text-green-800">AR</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Alex R.</h4>
+                            <p class="text-sm opacity-80">Founder, Tech Startup</p>
+                        </div>
+                    </div>
+                    <p class="mb-6 italic">"As a small team, we couldn't respond to inquiries fast enough. Now our chatbot handles initial conversations and books calls 24/7. Game changer!"</p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                        <i class="fas fa-star text-yellow-300"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#contact" class="inline-block px-8 py-4 bg-white text-purple-600 font-bold rounded-lg text-lg hover:bg-gray-100 transition duration-300">See How It Works For You</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">One flat rate for everything you need to automate your sales process.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="pricing-card bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Starter</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">£1,000</span>
+                        <span class="text-gray-600">/ one-time</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Basic Chatbot Implementation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Calendar Integration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Standard Script</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times text-red-400 mr-2"></i>
+                            <span>No Advanced Features</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-times text-red-400 mr-2"></i>
+                            <span>No Priority Support</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 px-4 text-center rounded-lg border-2 border-purple-600 text-purple-600 font-bold hover:bg-purple-600 hover:text-white transition duration-300">Get Started</a>
+                </div>
+                
+                <div class="pricing-card popular bg-white p-8 rounded-xl shadow-lg relative">
+                    <div class="absolute top-0 right-0 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">MOST POPULAR</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Professional</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">£1,500</span>
+                        <span class="text-gray-600">/ one-time</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Complete Chatbot Implementation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Calendar & CRM Integration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Custom Script for Your Business</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Lead Qualification Logic</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Priority Support</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 px-4 text-center rounded-lg gradient-bg text-white font-bold hover:opacity-90 transition duration-300">Get Started</a>
+                </div>
+                
+                <div class="pricing-card bg-gray-50 p-8 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900">Enterprise</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">£2,500+</span>
+                        <span class="text-gray-600">/ one-time</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Everything in Professional</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Multiple Chatbots</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Advanced Analytics</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Custom Development</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Dedicated Account Manager</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 px-4 text-center rounded-lg border-2 border-purple-600 text-purple-600 font-bold hover:bg-purple-600 hover:text-white transition duration-300">Contact Us</a>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-lg text-gray-600 mb-4">Limited implementation slots available this month — act now!</p>
+                <a href="#contact" class="inline-flex items-center px-6 py-3 gradient-bg text-white font-bold rounded-lg hover:opacity-90 transition duration-300">
+                    Book Your Free Strategy Call
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with New Booking System -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Ready to Automate Your Sales?</h2>
+                    <p class="text-xl text-gray-600 mb-8">Book a free 15-minute demo to see how our AI chatbots can transform your sales process.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-gray-700 font-medium">No obligation</p>
+                                <p class="text-gray-500">See if it's right for you with zero commitment</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-gray-700 font-medium">Custom strategy</p>
+                                <p class="text-gray-500">We'll create a plan tailored to your business</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-gray-700 font-medium">Fast implementation</p>
+                                <p class="text-gray-500">Get started with your chatbot in just 48 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-xl shadow-sm">
+                    <div class="booking-container">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Schedule Your Demo</h3>
+                        
+                        <!-- Booking Tabs -->
+                        <div class="booking-tabs">
+                            <div class="booking-tab active" data-tab="calendar">Select Date</div>
+                            <div class="booking-tab" data-tab="time">Select Time</div>
+                            <div class="booking-tab" data-tab="details">Your Details</div>
+                        </div>
+                        
+                        <!-- Calendar Step -->
+                        <div class="booking-content active" id="calendar-step">
+                            <div class="calendar-header">
+                                <button id="prev-month" class="text-gray-600 hover:text-purple-600">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <h4 id="current-month" class="font-bold text-lg">June 2025</h4>
+                                <button id="next-month" class="text-gray-600 hover:text-purple-600">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                            <div class="calendar-weekdays">
+                                <div>Sun</div>
+                                <div>Mon</div>
+                                <div>Tue</div>
+                                <div>Wed</div>
+                                <div>Thu</div>
+                                <div>Fri</div>
+                                <div>Sat</div>
+                            </div>
+                            <div class="calendar-grid" id="calendar-days">
+                                <!-- Calendar days will be populated by JavaScript -->
+                            </div>
+                            <div class="mt-6 flex justify-end">
+                                <button class="next-step px-6 py-2 gradient-bg text-white font-bold rounded-lg hover:opacity-90 transition duration-300" data-next="time">
+                                    Next: Select Time <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Time Selection Step -->
+                        <div class="booking-content" id="time-step">
+                            <h4 class="font-bold text-lg mb-4">Available Time Slots</h4>
+                            <p class="text-gray-600 mb-6">Select a time for your demo on <span id="selected-date-display" class="font-semibold">June 15, 2025</span></p>
+                            
+                            <div class="time-slots-container">
+                                <h5 class="font-medium mb-3">Morning</h5>
+                                <div class="flex flex-wrap mb-6">
+                                    <div class="time-slot" data-time="09:00">9:00 AM</div>
+                                    <div class="time-slot" data-time="09:30">9:30 AM</div>
+                                    <div class="time-slot" data-time="10:00">10:00 AM</div>
+                                    <div class="time-slot" data-time="10:30">10:30 AM</div>
+                                    <div class="time-slot" data-time="11:00">11:00 AM</div>
+                                    <div class="time-slot" data-time="11:30">11:30 AM</div>
+                                </div>
+                                
+                                <h5 class="font-medium mb-3">Afternoon</h5>
+                                <div class="flex flex-wrap mb-6">
+                                    <div class="time-slot" data-time="13:00">1:00 PM</div>
+                                    <div class="time-slot" data-time="13:30">1:30 PM</div>
+                                    <div class="time-slot" data-time="14:00">2:00 PM</div>
+                                    <div class="time-slot" data-time="14:30">2:30 PM</div>
+                                    <div class="time-slot" data-time="15:00">3:00 PM</div>
+                                    <div class="time-slot" data-time="15:30">3:30 PM</div>
+                                </div>
+                                
+                                <h5 class="font-medium mb-3">Evening</h5>
+                                <div class="flex flex-wrap">
+                                    <div class="time-slot" data-time="16:00">4:00 PM</div>
+                                    <div class="time-slot" data-time="16:30">4:30 PM</div>
+                                    <div class="time-slot" data-time="17:00">5:00 PM</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-6 flex justify-between">
+                                <button class="prev-step px-6 py-2 border border-gray-300 text-gray-700 font-bold rounded-lg hover:bg-gray-50 transition duration-300" data-prev="calendar">
+                                    <i class="fas fa-arrow-left mr-2"></i> Back
+                                </button>
+                                <button class="next-step px-6 py-2 gradient-bg text-white font-bold rounded-lg hover:opacity-90 transition duration-300" data-next="details">
+                                    Next: Your Details <i class="fas fa-arrow-right ml-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Details Form Step -->
+                        <div class="booking-content" id="details-step">
+                            <form id="bookingForm" class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
+                                    <input type="text" id="company" name="company" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                                </div>
+                                
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number (Optional)</label>
+                                    <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">What would you like to discuss?</label>
+                                    <textarea id="message" name="message" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"></textarea>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="consent" name="consent" class="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300 rounded" required>
+                                    <label for="consent" class="ml-2 block text-sm text-gray-700">
+                                        I agree to the <a href="#privacy-policy" class="text-purple-600 hover:text-purple-800">Privacy Policy</a> and <a href="#terms-of-service" class="text-purple-600 hover:text-purple-800">Terms of Service</a>
+                                    </label>
+                                </div>
+                                
+                                <div class="flex justify-between">
+                                    <button type="button" class="prev-step px-6 py-2 border border-gray-300 text-gray-700 font-bold rounded-lg hover:bg-gray-50 transition duration-300" data-prev="time">
+                                        <i class="fas fa-arrow-left mr-2"></i> Back
+                                    </button>
+                                    <button type="submit" class="px-6 py-3 gradient-bg text-white font-bold rounded-lg hover:opacity-90 transition duration-300">
+                                        Confirm Booking <i class="fas fa-calendar-check ml-2"></i>
+                                    </button>
+                                </div>
+                            </form>
+                            
+                            <div id="bookingSuccess" class="hidden mt-6 p-4 bg-green-50 text-green-700 rounded-lg">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>Your demo has been scheduled! We've sent a confirmation to your email.</span>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="font-medium">Booking Details:</p>
+                                    <p id="bookingDetails" class="text-sm"></p>
+                                </div>
+                                <div class="mt-4">
+                                    <p>We'll send you a calendar invite with a Zoom link shortly.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600">Everything you need to know about our AI chatbot solution.</p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium text-gray-900 hover:bg-gray-50 transition duration-300">
+                        <span>How quickly can I get my chatbot set up?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">Our standard implementation takes just 48 hours from when we receive all necessary information. For more complex requirements, we'll provide a timeline during our initial consultation.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium text-gray-900 hover:bg-gray-50 transition duration-300">
+                        <span>What platforms does the chatbot integrate with?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">Our chatbots integrate seamlessly with most major platforms including Google Calendar, Outlook, Calendly, Salesforce, HubSpot, and many others. We can also create custom integrations if needed.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium text-gray-900 hover:bg-gray-50 transition duration-300">
+                        <span>Do I need any technical skills to use this?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">Not at all! We handle all the technical setup for you. Once implemented, you can manage basic settings through our user-friendly dashboard with no coding required.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium text-gray-900 hover:bg-gray-50 transition duration-300">
+                        <span>How does the chatbot qualify leads before booking calls?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">We work with you to identify key qualification criteria for your business. The chatbot then asks strategic questions to determine if the lead is a good fit before offering to book a call. This ensures your sales team spends time only with high-potential prospects.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-question w-full flex justify-between items-center p-6 text-left font-medium text-gray-900 hover:bg-gray-50 transition duration-300">
+                        <span>What kind of results can I expect?</span>
+                        <i class="fas fa-chevron-down text-purple-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 pt-0">
+                        <p class="text-gray-600">Our clients typically see a 3-5x increase in qualified sales calls within the first month, with many reporting higher conversion rates as well since the chatbot ensures only the best leads get through to your team.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-lg text-gray-600 mb-4">Still have questions? We're happy to help!</p>
+                <a href="#contact" class="inline-flex items-center px-6 py-3 gradient-bg text-white font-bold rounded-lg hover:opacity-90 transition duration-300">
+                    Contact Our Team
+                    <i class="fas fa-envelope ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Sales Process?</h2>
+            <p class="text-xl opacity-90 mb-8">Join hundreds of businesses automating their sales calls with our AI chatbots.</p>
+            <a href="#contact" class="inline-flex items-center px-8 py-4 bg-white text-purple-600 font-bold rounded-lg text-lg hover:bg-gray-100 transition duration-300">
+                Get Started Today
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-robot text-2xl text-purple-400 mr-2"></i>
+                        <span class="text-xl font-bold">AI Chatbot Pros</span>
+                    </div>
+                    <p class="text-gray-400">Automating your sales process with intelligent AI chatbots that work 24/7 to book more calls and grow your business.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition duration-300">Features</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition duration-300">About</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition duration-300">Results</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-white transition duration-300">Pricing</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#privacy-policy" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#terms-of-service" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
+                        <li><a href="#cookie-policy" class="text-gray-400 hover:text-white transition duration-300">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-purple-600 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-400 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-pink-600 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Email: akershaw@aichatbotpros.co.uk</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 AI Chatbot Pros. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#privacy-policy" class="text-gray-400 hover:text-white transition duration-300">Privacy</a>
+                    <a href="#terms-of-service" class="text-gray-400 hover:text-white transition duration-300">Terms</a>
+                    <a href="#cookie-policy" class="text-gray-400 hover:text-white transition duration-300">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Privacy Policy Page (hidden by default) -->
+    <div id="privacy-policy" class="policy-page hidden bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h1>Privacy Policy</h1>
+            <p>Last Updated: January 2025</p>
+            
+            <p>AI Chatbot Pros ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+            
+            <h2>Information We Collect</h2>
+            <p>We may collect personal information that you voluntarily provide to us when you:</p>
+            <ul>
+                <li>Register for an account or request a demo</li>
+                <li>Subscribe to our newsletter</li>
+                <li>Contact us with inquiries</li>
+                <li>Use our chatbot services</li>
+            </ul>
+            
+            <h2>How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Provide, operate, and maintain our services</li>
+                <li>Improve, personalize, and expand our services</li>
+                <li>Understand and analyze how you use our services</li>
+                <li>Develop new products, services, features, and functionality</li>
+                <li>Communicate with you for customer service and support</li>
+            </ul>
+            
+            <h2>Data Security</h2>
+            <p>We implement appropriate technical and organizational measures to protect the security of your personal information. However, no internet transmission or electronic storage is ever completely secure.</p>
+            
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+            
+            <div class="mt-8">
+                <a href="#" onclick="hidePolicyPage()" class="px-6 py-3 gradient-bg text-white font-bold rounded-lg hover:opacity-90 transition duration-300 inline-block">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms of Service Page (hidden by default) -->
+    <div id="terms-of-service" class="policy-page hidden bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h1>Terms of Service</h1>
+            <p>Last Updated: January 2025</p>
+            
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using the services provided by AI Chatbot Pros ("we," "our," or "us"), you agree to be bound by these Terms of Service.</p>
+            
+            <h2>2. Description of Service</h2>
+            <p>AI Chatbot Pros provides AI-powered chatbot solutions designed to automate sales processes, including lead qualification and appointment scheduling.</p>
+            
+            <h2>3. User Responsibilities</h2>
+            <p>You agree to:</p>
+            <ul>
+                <li>Provide accurate and complete information when using our services</li>
+                <li>Use our services only for lawful purposes</li>
+                <li>Not interfere with or disrupt the integrity or performance of our services</li>
+                <li>Comply with all applicable laws and regulations</li>
+            </ul>
+            
+            <h2>4. Payment Terms</h2>
+            <p>Our services are offered on a one-time payment basis unless otherwise agreed in writing. All fees are non-refundable except as required by law.</p>
+            
+            <h2>5. Intellectual Property</h2>
+            <p>All content and technology included on our website and in our services are the property of AI Chatbot Pros or its licensors and are protected by copyright and other intellectual property laws.</p>
+            
+            <h2>6. Limitation of Liability</h2>
+            <p>AI Chatbot Pros shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use our services.</p>
+            
+            <div class="mt-8">
+                <a href="#" onclick="hidePolicyPage()" class="px-6 py-3 gradient-bg text-white font-bold rounded-lg hover:opacity-90 transition duration-300 inline-block">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Policy Page (hidden by default) -->
+    <div id="cookie-policy" class="policy-page hidden bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h1>Cookie Policy</h1>
+            <p>Last Updated: January 2025</p>
+            
+            <h2>What Are Cookies</h2>
+            <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to the website owners.</p>
+            
+            <h2>How We Use Cookies</h2>
+            <p>AI Chatbot Pros uses cookies for several purposes:</p>
+            <ul>
+                <li><strong>Essential Cookies:</strong> These are necessary for the website to function and cannot be switched off.</li>
+                <li><strong>Performance Cookies:</strong> These help us understand how visitors interact with our website.</li>
+                <li><strong>Functionality Cookies:</strong> These allow the website to remember choices you make.</li>
+                <li><strong>Targeting Cookies:</strong> These may be set through our site by our advertising partners.</li>
+            </ul>
+            
+            <h2>Managing Cookies</h2>
+            <p>You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed.</p>
+            
+            <h2>Changes to This Cookie Policy</h2>
+            <p>We may update our Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page.</p>
+            
+            <div class="mt-8">
+                <a href="#" onclick="hidePolicyPage()" class="px-6 py-3 gradient-bg text-white font-bold rounded-lg hover:opacity-90 transition duration-300 inline-block">
+                    Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to your server
+            // For this example, we'll just show the success message
+            contactForm.reset();
+            successMessage.classList.remove('hidden');
+            
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Policy page handling
+        function showPolicyPage(id) {
+            // Hide all policy pages first
+            document.querySelectorAll('.policy-page').forEach(page => {
+                page.classList.add('hidden');
+            });
+            
+            // Show the requested policy page
+            document.getElementById(id).classList.remove('hidden');
+            
+            // Scroll to top of the policy page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Prevent default anchor behavior
+            return false;
+        }
+        
+        function hidePolicyPage() {
+            // Hide all policy pages
+            document.querySelectorAll('.policy-page').forEach(page => {
+                page.classList.add('hidden');
+            });
+            
+            // Scroll back to top of main page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Prevent default anchor behavior
+            return false;
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                
+                // Check if this is a policy page link
+                if (href === '#privacy-policy' || href === '#terms-of-service' || href === '#cookie-policy') {
+                    e.preventDefault();
+                    showPolicyPage(href.substring(1));
+                    return;
+                }
+                
+                // Default anchor behavior for other links
+                if (href === '#') return;
+                
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    // Calculate the offset considering the fixed header
+                    const headerHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // New Booking System JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Booking System Variables
+            let selectedDate = null;
+            let selectedTime = null;
+            const currentDate = new Date();
+            let currentMonth = currentDate.getMonth();
+            let currentYear = currentDate.getFullYear();
+            
+            // Tab Navigation
+            const tabs = document.querySelectorAll('.booking-tab');
+            const tabContents = document.querySelectorAll('.booking-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabId = tab.getAttribute('data-tab');
+                    
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    
+                    // Show corresponding content
+                    tabContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    document.getElementById(`${tabId}-step`).classList.add('active');
+                });
+            });
+            
+            // Next/Prev Step Buttons
+            const nextButtons = document.querySelectorAll('.next-step');
+            const prevButtons = document.querySelectorAll('.prev-step');
+            
+            nextButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const nextTabId = button.getAttribute('data-next');
+                    const nextTab = document.querySelector(`.booking-tab[data-tab="${nextTabId}"]`);
+                    nextTab.click();
+                });
+            });
+            
+            prevButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const prevTabId = button.getAttribute('data-prev');
+                    const prevTab = document.querySelector(`.booking-tab[data-tab="${prevTabId}"]`);
+                    prevTab.click();
+                });
+            });
+            
+            // Calendar Navigation
+            const prevMonthBtn = document.getElementById('prev-month');
+            const nextMonthBtn = document.getElementById('next-month');
+            const currentMonthDisplay = document.getElementById('current-month');
+            const calendarDays = document.getElementById('calendar-days');
+            
+            function renderCalendar() {
+                // Update month display
+                currentMonthDisplay.textContent = new Date(currentYear, currentMonth).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+                
+                // Clear previous days
+                calendarDays.innerHTML = '';
+                
+                // Get first day of month and total days in month
+                const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+                const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+                
+                // Get days from previous month to display
+                const prevMonthDays = new Date(currentYear, currentMonth, 0).getDate();
+                
+                // Create calendar grid
+                let dayCount = 1;
+                let nextMonthDay = 1;
+                
+                // Add empty cells for days of previous month
+                for (let i = 0; i < firstDay; i++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.classList.add('calendar-day', 'disabled');
+                    dayElement.textContent = prevMonthDays - firstDay + i + 1;
+                    calendarDays.appendChild(dayElement);
+                }
+                
+                // Add days of current month
+                for (let i = 1; i <= daysInMonth; i++) {
+                    const dayElement = document.createElement('div');
+                    dayElement.classList.add('calendar-day');
+                    dayElement.textContent = i;
+                    
+                    // Highlight today
+                    if (i === currentDate.getDate() && currentMonth === currentDate.getMonth() && currentYear === currentDate.getFullYear()) {
+                        dayElement.classList.add('selected');
+                    }
+                    
+                    // Add click event
+                    dayElement.addEventListener('click', () => {
+                        document.querySelectorAll('.calendar-day').forEach(day => day.classList.remove('selected'));
+                        dayElement.classList.add('selected');
+                        
+                        selectedDate = new Date(currentYear, currentMonth, i);
+                        document.getElementById('selected-date-display').textContent = selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+                    });
+                    
+                    calendarDays.appendChild(dayElement);
+                    dayCount++;
+                }
+                
+                // Add days from next month to complete the grid
+                const remainingCells = 42 - (firstDay + daysInMonth);
+                if (remainingCells > 0) {
+                    for (let i = 1; i <= remainingCells; i++) {
+                        const dayElement = document.createElement('div');
+                        dayElement.classList.add('calendar-day', 'disabled');
+                        dayElement.textContent = i;
+                        calendarDays.appendChild(dayElement);
+                    }
+                }
+            }
+            
+            // Initialize calendar
+            renderCalendar();
+            
+            // Month navigation
+            prevMonthBtn.addEventListener('click', () => {
+                currentMonth--;
+                if (currentMonth < 0) {
+                    currentMonth = 11;
+                    currentYear--;
+                }
+                renderCalendar();
+            });
+            
+            nextMonthBtn.addEventListener('click', () => {
+                currentMonth++;
+                if (currentMonth > 11) {
+                    currentMonth = 0;
+                    currentYear++;
+                }
+                renderCalendar();
+            });
+            
+            // Time slot selection
+            const timeSlots = document.querySelectorAll('.time-slot');
+            
+            timeSlots.forEach(slot => {
+                slot.addEventListener('click', () => {
+                    document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                    slot.classList.add('selected');
+                    selectedTime = slot.getAttribute('data-time');
+                });
+            });
+            
+            // Booking form submission
+            const bookingForm = document.getElementById('bookingForm');
+            const bookingSuccess = document.getElementById('bookingSuccess');
+            const bookingDetails = document.getElementById('bookingDetails');
+            
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Validate selections
+                if (!selectedDate) {
+                    alert('Please select a date for your demo');
+                    return;
+                }
+                
+                if (!selectedTime) {
+                    alert('Please select a time for your demo');
+                    return;
+                }
+                
+                // Format date and time
+                const formattedDate = selectedDate.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+                const formattedTime = selectedTime.includes('13') ? selectedTime.replace('13:', '1:') + ' PM' : 
+                                      selectedTime.includes('14') ? selectedTime.replace('14:', '2:') + ' PM' :
+                                      selectedTime.includes('15') ? selectedTime.replace('15:', '3:') + ' PM' :
+                                      selectedTime.includes('16') ? selectedTime.replace('16:', '4:') + ' PM' :
+                                      selectedTime.includes('17') ? selectedTime.replace('17:', '5:') + ' PM' :
+                                      selectedTime.replace(':', '') + ' AM';
+                
+                // Display success message
+                bookingDetails.textContent = `${formattedDate} at ${formattedTime}`;
+                bookingForm.classList.add('hidden');
+                bookingSuccess.classList.remove('hidden');
+                
+                // Here you would typically send the booking data to your server
+                // For this example, we'll just show the success message
+                
+                // Scroll to success message
+                bookingSuccess.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
