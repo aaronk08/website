@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,29 @@
     <title>AI Chatbot Pros | Automate Your Sales Process</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+  /* Hide the body until CSS is loaded */
+  html {
+    visibility: hidden;
+  }
+  .js-loading * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+  }
+</style>
+<script>
+  // Add class to html element to prevent transitions during page load
+  document.documentElement.classList.add('js-loading');
+  
+  // Remove class when page is fully loaded
+  window.addEventListener('load', function() {
+    document.documentElement.classList.remove('js-loading');
+    document.documentElement.style.visibility = 'visible';
+  });
+</script>
     <style>
         .gradient-bg {
             background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
@@ -1245,5 +1269,21 @@
             });
         });
     </script>
+<script>
+  // Scroll to top when page is refreshed
+  window.onbeforeunload = function() {
+    window.scrollTo(0, 0);
+  };
+  
+  // Alternative method that works on most browsers
+  if (history.scrollRestoration) {
+    history.scrollRestoration = 'manual';
+  }
+  
+  // Make sure page starts at top when loaded
+  window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
+  });
+</script>
 </body>
 </html>
