@@ -1,3 +1,5 @@
+Entire code which needs new booking code inputted :
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -139,8 +141,8 @@
                                 <p class="text-gray-800">I'd like to schedule a demo of your product.</p>
                             </div>
                             <div class="mt-4 flex space-x-2">
-                                <button class="px-3 py-2 bg-white bg-opacity-20 text-white rounded-lg text-sm">Sure! What day works?</button>
-                                <button class="px-3 py-2 bg-white bg-opacity-20 text-white rounded-lg text-sm">Tell me more first</button>
+                                <p class="px-3 py-2 bg-white bg-opacity-20 text-white rounded-lg text-sm">Sure! What day works?</b>
+                                <p class="px-3 py-2 bg-white bg-opacity-20 text-white rounded-lg text-sm">Tell me more first</b>
                             </div>
                         </div>
                     </div>
@@ -435,7 +437,7 @@
                             <span>Dedicated Account Manager</span>
                         </li>
                     </ul>
-                    <a href="#contact" class="block w-full py-3 px-4 text-center rounded-lg border-2 border-purple-600 text-purple-600 font-bold hover:bg-purple-600 hover:text-white transition duration-300">Contact Us</a>
+                    <a href="#contact" class="block w-full py-3 px-4 text-center rounded-lg border-2 border-purple-600 text-purple-600 font-bold hover:bg-purple-600 hover:text-white transition duration-300">Get Started</a>
                 </div>
             </div>
             
@@ -449,102 +451,132 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Ready to Automate Your Sales?</h2>
-                    <p class="text-xl text-gray-600 mb-8">Book a free 15-minute demo to see how our AI chatbots can transform your sales process.</p>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 mt-1">
-                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-gray-700 font-medium">No obligation</p>
-                                <p class="text-gray-500">See if it's right for you with zero commitment</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 mt-1">
-                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-gray-700 font-medium">Custom strategy</p>
-                                <p class="text-gray-500">We'll create a plan tailored to your business</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 mt-1">
-                                <i class="fas fa-check-circle text-green-500 text-xl"></i>
-                            </div>
-                            <div class="ml-3">
-                                <p class="text-gray-700 font-medium">Fast implementation</p>
-                                <p class="text-gray-500">Get started with your chatbot in just 48 hours</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Ready to Automate Your Sales?</h2>
+                <p class="text-xl text-gray-600 mb-8">Book a free 15-minute demo to see how our AI chatbots can transform your sales process.</p>
                 
-                <!-- Your Booking Form (HTML Only) -->
-                <div class="max-w-md w-full bg-white p-8 rounded-xl shadow-sm">
-                    <div class="flex items-center mb-6">
-                        <i class="fas fa-robot text-2xl text-purple-600 mr-2"></i>
-                        <span class="text-xl font-bold text-gray-900">AI Chatbot Pros</span>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-gray-700 font-medium">No obligation</p>
+                            <p class="text-gray-500">See if it's right for you with zero commitment</p>
+                        </div>
                     </div>
                     
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Schedule Your Demo</h3>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                        </div>
+                        <div class="ml-3">
+                            <p class="text-gray-700 font-medium">Custom strategy</p>
+                            <p class="text-gray-500">We'll create a plan tailored to your business</p>
+                        </div>
+                    </div>
                     
-                    <form id="demoForm" class="space-y-6" action="https://formsubmit.co/akershaw@aichatbotpros.co.uk" method="POST">
-                        <input type="hidden" name="_next" value="https://calendly.com/aaronkershaw36/30min">
-                        <input type="hidden" name="_subject" value="New Demo Request">
-                        
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name*</label>
-                            <input type="text" id="name" name="name" required 
-                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 mt-1">
+                            <i class="fas fa-check-circle text-green-500 text-xl"></i>
                         </div>
-                        
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address*</label>
-                            <input type="email" id="email" name="email" required 
-                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500">
-                        </div>
-                        
-                        <div>
-                            <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
-                            <input type="text" id="company" name="company" 
-                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500">
-                        </div>
-                        
-                        <div>
-                            <label for="goal" class="block text-sm font-medium text-gray-700 mb-1">What would you like to achieve?</label>
-                            <textarea id="goal" name="goal" rows="3" 
-                                      class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full gradient-bg text-white font-bold py-3 px-4 rounded-lg hover:opacity-90 transition duration-300 flex items-center justify-center">
-                            Book My Free Demo
-                            <i class="fas fa-arrow-right ml-2"></i>
-                        </button>
-                    </form>
-                    
-                    <div id="statusMessage" class="mt-4 hidden">
-                        <div id="errorMessage" class="p-3 bg-red-50 text-red-700 rounded-lg flex items-center">
-                            <i class="fas fa-exclamation-circle mr-2"></i>
-                            <span>Please complete all required fields</span>
+                        <div class="ml-3">
+                            <p class="text-gray-700 font-medium">Fast implementation</p>
+                            <p class="text-gray-500">Get started with your chatbot in just 48 hours</p>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Schedule Your Demo</h3>
+                <form id="demoForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name*</label>
+                        <input type="text" id="name" name="name" required 
+                               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address*</label>
+                        <input type="email" id="email" name="email" required 
+                               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                    </div>
+                    
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
+                        <input type="text" id="company" name="company" 
+                               class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500">
+                    </div>
+                    
+                    <div>
+                        <label for="goal" class="block text-sm font-medium text-gray-700 mb-1">What would you like to achieve?</label>
+                        <textarea id="goal" name="goal" rows="3" 
+                                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-purple-600 text-white font-bold py-3 px-4 rounded-lg gradient-bg hover:opacity-90 transition duration-300 flex items-center justify-center">
+                        Book My Free Demo
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </form>
+                
+                <div id="statusMessage" class="mt-4 hidden">
+                    <div id="errorMessage" class="p-3 bg-red-50 text-red-700 rounded-lg flex items-center">
+                        <i class="fas fa-exclamation-circle mr-2"></i>
+                        <span>Please complete all required fields</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
-    <!-- [Remaining sections...] -->
+    <script>
+        document.getElementById('demoForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const statusMessage = document.getElementById('statusMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Validate
+            if (!formData.get('name') || !formData.get('email')) {
+                statusMessage.classList.remove('hidden');
+                errorMessage.classList.remove('hidden');
+                statusMessage.scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+            
+            try {
+                // Show loading state
+                const submitBtn = form.querySelector('button[type="submit"]');
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+                submitBtn.disabled = true;
+                
+                // 1. Send data to your email
+                await fetch('https://formsubmit.co/ajax/akershaw@aichatbotpros.co.uk', {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                // 2. Redirect to Calendly in SAME window
+                const calendlyUrl = `https://calendly.com/aaronkershaw36/30min?name=${encodeURIComponent(formData.get('name'))}&email=${encodeURIComponent(formData.get('email'))}&a1=${encodeURIComponent(formData.get('company'))}&a2=${encodeURIComponent(formData.get('goal'))}`;
+                window.location.href = calendlyUrl;
+                
+            } catch (error) {
+                console.error('Error:', error);
+                // Fallback - redirect without prefilled data
+                window.location.href = 'https://calendly.com/aaronkershaw36/30min';
+            }
+        });
+    </script>
+</section>
+
     <!-- FAQ Section -->
     <section class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -650,29 +682,344 @@
                     </ul>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#privacy-policy" class="text-gray-400 hover:text-white transition duration-300">Privacy Policy</a></li>
-                        <li><a href="#terms-of-service" class="text-gray-400 hover:text-white transition duration-300">Terms of Service</a></li>
-                        <li><a href="#cookie-policy" class="text-gray-400 hover:text-white transition duration-300">Cookie Policy</a></li>
-                    </ul>
-                </div>
+               <!-- Navigation links for the footer -->
+<div id="legal-nav">
+    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+    <ul class="space-y-2">
+        <li><a href="#privacy-policy" class="text-gray-400 hover:text-white transition duration-300" onclick="showLegalPage('privacy-policy'); return false;">Privacy Policy</a></li>
+        <li><a href="#terms-of-service" class="text-gray-400 hover:text-white transition duration-300" onclick="showLegalPage('terms-of-service'); return false;">Terms of Service</a></li>
+        <li><a href="#cookie-policy" class="text-gray-400 hover:text-white transition duration-300" onclick="showLegalPage('cookie-policy'); return false;">Cookie Policy</a></li>
+    </ul>
+</div>
+
+<!-- Legal Pages Content (hidden by default) -->
+<div id="legal-pages" style="display: none;">
+    <!-- Privacy Policy -->
+    <div id="privacy-policy" class="legal-page">
+        <div class="legal-header">
+            <h1>Privacy Policy</h1>
+            <button class="close-legal" onclick="hideLegalPages()">×</button>
+        </div>
+        
+        <div class="legal-content">
+            <section class="legal-section">
+                <h2>Introduction</h2>
+                <p>Welcome to the Privacy Policy for AI Chatbot Pros ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This Privacy Policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>The Data We Collect</h2>
+                <p>We may collect, use, store, and transfer different kinds of personal data about you, which includes:</p>
+                <ul>
+                    <li><strong>Identity Data:</strong> Name, username or similar identifier</li>
+                    <li><strong>Contact Data:</strong> Billing address, delivery address, and telephone numbers</li>
+                    <li><strong>Technical Data:</strong> IP address, login data, browser type and version, time zone setting and location, browser plug-in types and versions, operating system and platform</li>
+                    <li><strong>Usage Data:</strong> Information about how you use our website, products, and services</li>
+                    <li><strong>Marketing Preferences:</strong> Your preferences for receiving marketing from us and communication preferences</li>
+                </ul>
+            </section>
+            
+            <section class="legal-section">
+                <h2>How We Use Your Data</h2>
+                <p>We use your data to provide and improve our chatbot services, including:</p>
+                <ul>
+                    <li>To deliver the AI chatbot services you have requested</li>
+                    <li>To manage our relationship with you</li>
+                    <li>To improve our website, products/services, marketing, and customer relationships</li>
+                    <li>To recommend products or services that may be of interest to you</li>
+                    <li>To comply with legal obligations</li>
+                </ul>
+            </section>
+            
+            <section class="legal-section">
+                <h2>Data Security</h2>
+                <p>We have implemented appropriate security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way. We limit access to your personal data to those employees, agents, contractors, and other third parties who have a business need to know.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>Your Legal Rights</h2>
+                <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to:</p>
+                <ul>
+                    <li>Request access to your personal data</li>
+                    <li>Request correction of your personal data</li>
+                    <li>Request erasure of your personal data</li>
+                    <li>Object to processing of your personal data</li>
+                    <li>Request restriction of processing your personal data</li>
+                    <li>Request transfer of your personal data</li>
+                    <li>Right to withdraw consent</li>
+                </ul>
+            </section>
+            
+            <section class="legal-section">
+                <h2>AI-Specific Privacy Considerations</h2>
+                <p>As a provider of AI chatbot solutions, we take additional measures to protect data processed by our AI systems:</p>
+                <ul>
+                    <li>Chatbot conversations are processed using industry-standard encryption</li>
+                    <li>We implement regular AI model updates to address potential vulnerabilities</li>
+                    <li>Training data for our AI systems is anonymized where possible</li>
+                    <li>We maintain transparency about AI capabilities and limitations</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <!-- Terms of Service -->
+    <div id="terms-of-service" class="legal-page">
+        <div class="legal-header">
+            <h1>Terms of Service</h1>
+            <button class="close-legal" onclick="hideLegalPages()">×</button>
+        </div>
+        
+        <div class="legal-content">
+            <section class="legal-section">
+                <h2>Agreement to Terms</h2>
+                <p>Welcome to AI Chatbot Pros. These Terms of Service govern your use of our website and services. By accessing or using our services, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the service.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>Description of Services</h2>
+                <p>AI Chatbot Pros provides AI-powered chatbot development, implementation, and management services for businesses. Our services include custom chatbot design, natural language processing optimization, integration with existing systems, analytics, and ongoing support and maintenance.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>User Accounts</h2>
+                <p>When you create an account with us, you must provide information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our service.</p>
+                <p>You are responsible for safeguarding the password that you use to access the service and for any activities or actions under your password. You agree not to disclose your password to any third party.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>Intellectual Property</h2>
+                <p>The service and its original content, features, and functionality are and will remain the exclusive property of AI Chatbot Pros and its licensors. The service is protected by copyright, trademark, and other laws. Our trademarks and trade dress may not be used in connection with any product or service without the prior written consent of AI Chatbot Pros.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>User Content</h2>
+                <p>Our service allows you to post, link, store, share and otherwise make available certain information, text, graphics, or other material. You are responsible for the content you provide, including its legality, reliability, and appropriateness.</p>
+                <p>By posting content, you grant us the right to use, modify, publicly perform, publicly display, reproduce, and distribute such content on and through our service.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>AI Technology Usage</h2>
+                <p>Our chatbot services utilize artificial intelligence technologies that:</p>
+                <ul>
+                    <li>Learn from interactions to improve performance</li>
+                    <li>Process data according to defined parameters</li>
+                    <li>Operate within technical limitations inherent to AI systems</li>
+                </ul>
+                <p>You acknowledge that AI chatbots have limitations and may not be suitable for all business scenarios, particularly those requiring human judgment or handling sensitive information.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>Limitation of Liability</h2>
+                <p>In no event shall AI Chatbot Pros, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the service.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>Termination</h2>
+                <p>We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the service will immediately cease.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>Changes to Terms</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. It is your responsibility to review these Terms periodically for changes.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>Governing Law</h2>
+                <p>These Terms shall be governed and construed in accordance with the laws, without regard to its conflict of law provisions.</p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Cookie Policy -->
+    <div id="cookie-policy" class="legal-page">
+        <div class="legal-header">
+            <h1>Cookie Policy</h1>
+            <button class="close-legal" onclick="hideLegalPages()">×</button>
+        </div>
+        
+        <div class="legal-content">
+            <section class="legal-section">
+                <h2>Introduction</h2>
+                <p>AI Chatbot Pros ("we" or "us" or "our") uses cookies on our website. This Cookie Policy explains what cookies are, how we use cookies, how third parties we may partner with may use cookies on our website, your choices regarding cookies, and further information about cookies.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>What Are Cookies</h2>
+                <p>Cookies are small pieces of text sent by your web browser by a website you visit. A cookie file is stored in your web browser and allows the service or a third party to recognize you and make your next visit easier and the service more useful to you.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>How AI Chatbot Pros Uses Cookies</h2>
+                <p>We use cookies for the following purposes:</p>
+                <ul>
+                    <li><strong>Essential cookies:</strong> Required for the operation of our website and services, such as remembering your login details and preferences</li>
+                    <li><strong>Analytics cookies:</strong> Allow us to analyze how visitors use our site and improve performance</li>
+                    <li><strong>Functionality cookies:</strong> Recognize you when you return to our website to remember preferences you may have set</li>
+                    <li><strong>AI performance cookies:</strong> Help our AI chatbots provide more personalized responses by remembering context from previous interactions</li>
+                    <li><strong>Marketing cookies:</strong> Track visitors across websites to allow us to display relevant and engaging advertisements</li>
+                </ul>
+            </section>
+            
+            <section class="legal-section">
+                <h2>Chatbot-Specific Cookies</h2>
+                <p>Our AI chatbots use specialized cookies to:</p>
+                <ul>
+                    <li>Maintain conversation context between user sessions</li>
+                    <li>Remember user preferences for chatbot interactions</li>
+                    <li>Store temporary conversation data to improve response accuracy</li>
+                    <li>Track chatbot performance metrics to improve our services</li>
+                </ul>
+            </section>
+            
+            <section class="legal-section">
+                <h2>Third-Party Cookies</h2>
+                <p>In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the service, deliver advertisements, and so on.</p>
+                <p>These may include:</p>
+                <ul>
+                    <li>Analytics providers such as Google Analytics</li>
+                    <li>Advertising networks</li>
+                    <li>Social media platforms when you use their integration features</li>
+                    <li>AI and natural language processing service providers</li>
+                </ul>
+            </section>
+            
+            <section class="legal-section">
+                <h2>What Are Your Choices Regarding Cookies</h2>
+                <p>If you prefer to avoid the use of cookies on our website, you can:</p>
+                <ul>
+                    <li>Configure your browser to refuse all cookies or to indicate when a cookie is being sent</li>
+                    <li>Use our cookie preference center to manage your selections</li>
+                    <li>Note that some features of the website may not function properly without cookies</li>
+                </ul>
+                <p>Most web browsers allow some control of most cookies through the browser settings. To find out more about cookies, including how to see what cookies have been set, visit <a href="https://www.aboutcookies.org/" target="_blank">www.aboutcookies.org</a>.</p>
+            </section>
+            
+            <section class="legal-section">
+                <h2>Cookie Types and Duration</h2>
+                <p>Cookies used on our website may be categorized as:</p>
+                <ul>
+                    <li><strong>Session Cookies:</strong> Temporary cookies that expire when you close your browser</li>
+                    <li><strong>Persistent Cookies:</strong> Remain on your device for a set period or until you delete them</li>
+                </ul>
+            </section>
+            
+            <section class="legal-section">
+                <h2>Changes to Our Cookie Policy</h2>
+                <p>We may update our Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page. You are advised to review this Cookie Policy periodically for any changes.</p>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- CSS for legal pages -->
+<style>
+    .legal-page {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        z-index: 1000;
+        overflow-y: auto;
+        color: #333;
+    }
+    
+    .legal-header {
+        background-color: #4a6cf7;
+        color: white;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1001;
+    }
+    
+    .legal-header h1 {
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    
+    .close-legal {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0 0.5rem;
+    }
+    
+    .legal-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    
+    .legal-section {
+        margin-bottom: 2rem;
+    }
+    
+    .legal-section h2 {
+        color: #4a6cf7;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+    
+    .legal-section p {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+    }
+    
+    .legal-section ul {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+    }
+    
+    .legal-section li {
+        margin-bottom: 0.5rem;
+    }
+</style>
+
+<!-- JavaScript for legal pages -->
+<script>
+    function showLegalPage(pageId) {
+        // Hide all legal pages
+        document.querySelectorAll('.legal-page').forEach(page => {
+            page.style.display = 'none';
+        });
+        
+        // Show the requested page
+        document.getElementById(pageId).style.display = 'block';
+        
+        // Show the legal pages container
+        document.getElementById('legal-pages').style.display = 'block';
+        
+        // Prevent scrolling of the background page
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function hideLegalPages() {
+        // Hide the legal pages container
+        document.getElementById('legal-pages').style.display = 'none';
+        
+        // Allow scrolling again
+        document.body.style.overflow = 'auto';
+    }
+</script>
+
                 
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Connect With Us</h4>
-                    <div class="flex space-x-4 mb-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-purple-600 transition duration-300">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-400 transition duration-300">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-pink-600 transition duration-300">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition duration-300">
-                            <i class="fab fa-facebook-f"></i>
+                    <div class="flex space-x-4 mb-1">
+                        
+                            
+                        
                         </a>
                     </div>
                     <p class="text-gray-400">Email: akershaw@aichatbotpros.co.uk</p>
@@ -681,38 +1028,224 @@
             
             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 mb-4 md:mb-0">© 2025 AI Chatbot Pros. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="#privacy-policy" class="text-gray-400 hover:text-white transition duration-300">Privacy</a>
-                    <a href="#terms-of-service" class="text-gray-400 hover:text-white transition duration-300">Terms</a>
-                    <a href="#cookie-policy" class="text-gray-400 hover:text-white transition duration-300">Cookies</a>
-                </div>
+                
             </div>
         </div>
     </footer>
 
-    <!-- Policy Pages (hidden by default) -->
+    <!-- Privacy Policy Page (hidden by default) -->
     <div id="privacy-policy" class="policy-page hidden bg-white">
         <div class="max-w-4xl mx-auto">
             <h1>Privacy Policy</h1>
             <p>Last Updated: January 2025</p>
-            <!-- [Policy content...] -->
+            
+            <p>AI Chatbot Pros ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+            
+            <h2>Information We Collect</h2>
+            <p>We may collect personal information that you voluntarily provide to us when you:</p>
+            <ul>
+                <li>Register for an account or request a demo</li>
+                <li>Subscribe to our newsletter</li>
+                <li>Contact us with inquiries</li>
+                <li>Use our chatbot services</li>
+            </ul>
+            
+            <h2>How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Provide, operate, and maintain our services</li>
+                <li>Improve, personalize, and expand our services</li>
+                <li>Understand and analyze how you use our services</li>
+                <li>Develop new products, services, features, and functionality</li>
+                <li>Communicate with you for customer service and support</li>
+            </ul>
+            
+            <h2>Data Security</h2>
+            <p>We implement appropriate technical and organizational measures to protect the security of your personal information. However, no internet transmission or electronic storage is ever completely secure.</p>
+            
+            <h2>Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+            
+            <div class="mt-8">
+                <a href="#" onclick="hidePolicyPage()" class="px-6 py-3 gradient-bg text-white font-bold rounded-lg hover:opacity-90 transition duration-300 inline-block">
+                    Back to Home
+                </a>
+            </div>
         </div>
     </div>
 
+    <!-- Terms of Service Page (hidden by default) -->
     <div id="terms-of-service" class="policy-page hidden bg-white">
         <div class="max-w-4xl mx-auto">
             <h1>Terms of Service</h1>
             <p>Last Updated: January 2025</p>
-            <!-- [Terms content...] -->
+            
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using the services provided by AI Chatbot Pros ("we," "our," or "us"), you agree to be bound by these Terms of Service.</p>
+            
+            <h2>2. Description of Service</h2>
+            <p>AI Chatbot Pros provides AI-powered chatbot solutions designed to automate sales processes, including lead qualification and appointment scheduling.</p>
+            
+            <h2>3. User Responsibilities</h2>
+            <p>You agree to:</p>
+            <ul>
+                <li>Provide accurate and complete information when using our services</li>
+                <li>Use our services only for lawful purposes</li>
+                <li>Not interfere with or disrupt the integrity or performance of our services</li>
+                <li>Comply with all applicable laws and regulations</li>
+            </ul>
+            
+            <h2>4. Payment Terms</h2>
+            <p>Our services are offered on a one-time payment basis unless otherwise agreed in writing. All fees are non-refundable except as required by law.</p>
+            
+            <h2>5. Intellectual Property</h2>
+            <p>All content and technology included on our website and in our services are the property of AI Chatbot Pros or its licensors and are protected by copyright and other intellectual property laws.</p>
+            
+            <h2>6. Limitation of Liability</h2>
+            <p>AI Chatbot Pros shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use our services.</p>
+            
+            <div class="mt-8">
+                <a href="#" onclick="hidePolicyPage()" class="px-6 py-3 gradient-bg text-white font-bold rounded-lg hover:opacity-90 transition duration-300 inline-block">
+                    Back to Home
+                </a>
+            </div>
         </div>
     </div>
 
+    <!-- Cookie Policy Page (hidden by default) -->
     <div id="cookie-policy" class="policy-page hidden bg-white">
         <div class="max-w-4xl mx-auto">
             <h1>Cookie Policy</h1>
             <p>Last Updated: January 2025</p>
-            <!-- [Cookie content...] -->
+            
+            <h2>What Are Cookies</h2>
+            <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and to provide information to the website owners.</p>
+            
+            <h2>How We Use Cookies</h2>
+            <p>AI Chatbot Pros uses cookies for several purposes:</p>
+            <ul>
+                <li><strong>Essential Cookies:</strong> These are necessary for the website to function and cannot be switched off.</li>
+                <li><strong>Performance Cookies:</strong> These help us understand how visitors interact with our website.</li>
+                <li><strong>Functionality Cookies:</strong> These allow the website to remember choices you make.</li>
+                <li><strong>Targeting Cookies:</strong> These may be set through our site by our advertising partners.</li>
+            </ul>
+            
+            <h2>Managing Cookies</h2>
+            <p>You can control and/or delete cookies as you wish. You can delete all cookies that are already on your computer and you can set most browsers to prevent them from being placed.</p>
+            
+            <h2>Changes to This Cookie Policy</h2>
+            <p>We may update our Cookie Policy from time to time. We will notify you of any changes by posting the new Cookie Policy on this page.</p>
+            
+            <div class="mt-8">
+                <a href="#" onclick="hidePolicyPage()" class="px-6 py-3 gradient-bg text-white font-bold rounded-lg hover:opacity-90 transition duration-300 inline-block">
+                    Back to Home
+                </a>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to your server
+            // For this example, we'll just show the success message
+            contactForm.reset();
+            successMessage.classList.remove('hidden');
+            
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Policy page handling
+        function showPolicyPage(id) {
+            // Hide all policy pages first
+            document.querySelectorAll('.policy-page').forEach(page => {
+                page.classList.add('hidden');
+            });
+            
+            // Show the requested policy page
+            document.getElementById(id).classList.remove('hidden');
+            
+            // Scroll to top of the policy page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Prevent default anchor behavior
+            return false;
+        }
+        
+        function hidePolicyPage() {
+            // Hide all policy pages
+            document.querySelectorAll('.policy-page').forEach(page => {
+                page.classList.add('hidden');
+            });
+            
+            // Scroll back to top of main page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Prevent default anchor behavior
+            return false;
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                
+                // Check if this is a policy page link
+                if (href === '#privacy-policy' || href === '#terms-of-service' || href === '#cookie-policy') {
+                    e.preventDefault();
+                    showPolicyPage(href.substring(1));
+                    return;
+                }
+                
+                // Default anchor behavior for other links
+                if (href === '#') return;
+                
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    // Calculate the offset considering the fixed header
+                    const headerHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
